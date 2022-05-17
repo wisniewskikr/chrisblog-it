@@ -1,0 +1,27 @@
+.full-height {
+	height: 100vh;
+}
+
+.frame {
+	padding: 7rem;
+}
+
+.header {
+	padding-bottom: 3vh;
+}
+
+.header div {
+	float: left;
+}
+
+.header input {
+	float: right;
+}
+
+.logout {
+	padding: 0; 
+   	margin: 0;
+   	border: 0;
+   	color: #0d6efd;
+   	background-color: transparent;
+}
