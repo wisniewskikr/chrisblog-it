@@ -1,0 +1,58 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: greeting-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: greeting-container
+  template:
+    metadata:
+      labels:
+        app: greeting-container
+    spec:
+      containers:
+        - name: greeting-container
+          image: localhost:5000/greeting-image
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 5
+      restartPolicy: Always
+---
+
+#kind: Service
+#apiVersion: v1
+#metadata:
+#  name: greeting-service
+#spec:
+#  type: NodePort#3  ports:
+#    - port: 8081
+#      targetPort: 8081
+#      protocol: TCP
+#      nodePort: 31000
+#  selector:
+#    app: greeting-container
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: greeting-service
+spec:
+  type: ClusterIP
+  selector:
+    app: greeting-container
+  ports:
+    - port: 80
+      targetPort: 8081
