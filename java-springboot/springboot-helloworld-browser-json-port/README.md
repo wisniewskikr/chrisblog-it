@@ -5,7 +5,7 @@ DESCRIPTION
 The goal of this project is to present how to display **Hello World** message and **port** number in a **JSON** format in a **browser** by **Java** application using **Spring Boot** framework.
 
 ##### Details
-The application displays message "Hello World" and "port" number" in JSON format in a browser. 
+The application displays message "Hello World" and "port" number in JSON format in a browser. 
 
 ##### Launch
 To launch this application a user just has to run it via Command Line tool and types specific URL in a browser. Message will be displayed as application response.
@@ -27,7 +27,7 @@ PRECONDITIONS
 ##### Preconditions - Actions
 * Open **source code folder** using any **Command Line** tool (for instance "Windonw PowerShell" on Windows OS). To do it please open any Command Line tool in a desired target location and use following commands:
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-browser-json`
+    * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-browser-json-port`
 
 
 USAGE
