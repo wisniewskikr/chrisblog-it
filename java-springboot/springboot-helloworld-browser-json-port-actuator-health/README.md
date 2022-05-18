@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present  how to check **health** of application using **actuator** dependency. Project also displays **Hello World** message and **port** number in a **JSON** format in a **browser** by **Java** application using **Spring Boot** framework.
+The goal of this project is to present how to check **health** of application using **actuator** dependency. Project also displays **Hello World** message and **port** number in a **JSON** format in a **browser** by **Java** application using **Spring Boot** framework.
 
 ##### Details
 The application displays message "Hello World" and "port" number in JSON format in a browser. The application also provides health status using actuator dependency. 
