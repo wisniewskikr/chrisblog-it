@@ -2,10 +2,10 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to check **health** of application using **actuator** dependency. Project also displays **Hello World** message in a **text** format in a **browser** by **Java** application using **Spring Boot** framework.
+The goal of this project is to present how to check **health** of application using **actuator** dependency. Project also displays **Hello World** message in a **JSON** format in a **browser** by **Java** application using **Spring Boot** framework.
 
 ##### Details
-The application displays message "Hello World" in a text format in a browser. The application also provides health status using actuator dependency.
+The application displays message "Hello World" in a JSON format in a browser. The application also provides health status using actuator dependency.
 
 ##### Launch
 To launch this application a user just has to run it via Command Line tool and types specific URL in a browser. Message will be displayed as application response. Also health status will be displayed as application response in a browser. 
@@ -27,7 +27,7 @@ PRECONDITIONS
 ##### Preconditions - Actions
 * Open **source code folder** using any **Command Line** tool (for instance "Windonw PowerShell" on Windows OS). To do it please open any Command Line tool in a desired target location and use following commands:
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-browser-text-actuator-health`
+    * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-browser-json-actuator-health`
 
 
 USAGE
