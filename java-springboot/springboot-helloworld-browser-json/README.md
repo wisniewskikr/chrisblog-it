@@ -2,17 +2,17 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to display **Hello World** message in a **JSON** format in a **browser** by **Java** application using **Spring Boot** framework.
+The goal of this project is to present how to display **Hello World** message in a **JSON** format in a **browser** using **Java** application with **Spring Boot** framework.
 
 ##### Details
 The application displays message "Hello World" in JSON format in a browser. 
 
 ##### Launch
-To launch this application a user just has to run it via Command Line tool and types specific URL in a browser. Message will be displayed as application response.
+To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
 
 ##### Technologies
 This application uses:
-* **Spring Boot** framework: framework details: `https://docs.google.com/document/d/1mvrJT5clbkr9yTj-AQ7YOXcqr2eHSEw2J8n9BMZIZKY/edit?usp=sharing`
+* **Spring Boot** framework: `https://docs.google.com/document/d/1mvrJT5clbkr9yTj-AQ7YOXcqr2eHSEw2J8n9BMZIZKY/edit?usp=sharing`
 
 
 PRECONDITIONS
@@ -25,7 +25,8 @@ PRECONDITIONS
 * Installed **Git** (tested on version 2.33.0.windows.2). Tool details: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
 
 ##### Preconditions - Actions
-* Open **source code folder** using any **Command Line** tool (for instance "Windonw PowerShell" on Windows OS). To do it please open any Command Line tool in a desired target location and use following commands:
+* **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
+    * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
     * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-browser-json`
 
