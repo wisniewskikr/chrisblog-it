@@ -5,7 +5,7 @@ DESCRIPTION
 The goal of this project is to present how to display **Hello World** message in a **JSON** format in a **browser** using **Java** application with **Spring Boot** framework.
 
 ##### Details
-The application displays message "Hello World" in JSON format in a browser. 
+This application displays message "Hello World" in JSON format in a browser. 
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
