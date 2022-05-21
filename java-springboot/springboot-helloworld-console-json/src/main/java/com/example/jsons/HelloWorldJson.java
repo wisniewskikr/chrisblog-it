@@ -1,12 +1,12 @@
 package com.example.jsons;
 
-public class GreetingJson {
+public class HelloWorldJson {
 	
 	private String message;	
 	
-	public GreetingJson() {}
+	public HelloWorldJson() {}
 
-	public GreetingJson(String message) {		
+	public HelloWorldJson(String message) {		
 		this.message = message;
 	}
 	
