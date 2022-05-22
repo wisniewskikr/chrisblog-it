@@ -1,10 +1,10 @@
-package com.example.controllers.output;
+package com.example.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.commands.output.OutputCommand;
+import com.example.commands.OutputCommand;
 
 
 @Controller

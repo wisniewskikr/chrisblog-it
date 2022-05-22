@@ -1,4 +1,4 @@
-package com.example.commands.input;
+package com.example.commands;
 
 public class InputCommand {
 	

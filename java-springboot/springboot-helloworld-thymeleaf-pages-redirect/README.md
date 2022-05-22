@@ -2,13 +2,13 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to redirect from one to other **HTML** pages in a **browser** by **Java** application using **Spring Boot** and **Thymeleaf** frameworks.
+The goal of this project is to present how to redirect from one to other **HTML** page in a **browser** using **Java** application with **Spring Boot** and **Thymeleaf** frameworks.
 
 ##### Details
 The application consists of two HTML pages. First page contains link which redirects to second page. Second page displays message "Hello World". 
 
 ##### Launch
-To launch this application a user just has to run it via Command Line tool and types specific URL in a browser. The initial result page be displayed as application response.
+To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
 
 ##### Technologies
 This application uses:
@@ -26,7 +26,8 @@ PRECONDITIONS
 * Installed **Git** (tested on version 2.33.0.windows.2). Tool details: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
 
 ##### Preconditions - Actions
-* Open **source code folder** using any **Command Line** tool (for instance "Windonw PowerShell" on Windows OS). To do it please open any Command Line tool in a desired target location and use following commands:
+* **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
+    * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
     * Go to source code folder with `cd chrisblog-it\java-springboot\springboot-helloworld-thymeleaf-pages-redirect`
 

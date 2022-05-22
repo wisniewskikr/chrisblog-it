@@ -1,4 +1,4 @@
-package com.example.commands.output;
+package com.example.commands;
 
 public class OutputCommand {
 	
