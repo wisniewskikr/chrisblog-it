@@ -1,6 +1,6 @@
-package com.example.commands.greeting;
+package com.example.commands;
 
-public class GreetingCommand {
+public class HelloWorldCommand {
 	
 	private String text;
 
