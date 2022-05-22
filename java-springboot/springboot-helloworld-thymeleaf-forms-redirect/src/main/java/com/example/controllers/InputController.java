@@ -1,4 +1,4 @@
-package com.example.controllers.input;
+package com.example.controllers;
 
 import javax.servlet.http.HttpSession;
 
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.commands.input.InputCommand;
+import com.example.commands.InputCommand;
 
 
 @Controller

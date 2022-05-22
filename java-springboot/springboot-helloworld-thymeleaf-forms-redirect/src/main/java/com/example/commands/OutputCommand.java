@@ -1,6 +1,6 @@
-package com.example.commands.input;
+package com.example.commands;
 
-public class InputCommand {
+public class OutputCommand {
 		
 	private String name;
 
