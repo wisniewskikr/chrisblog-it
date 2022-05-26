@@ -87,11 +87,11 @@ Usage steps:
 3. Send messages (expected text **Done** in the browser) with **http://localhost:8080/helloworld/partition/{partition}/timestamp/{timestamp}/key/{key}/value/{value}** . For instance:
     * `http://localhost:8080/helloworld/partition/null/timestamp/null/key/helloworld/value/John`
     * `http://localhost:8081/helloworld/partition/null/timestamp/null/key/helloworld/value/Mary`
-4. Read messages by checking logs in Command Line tool. Following message should be displayed there: **{consumer}   | Event Details: Group Id: {group-id}, Offset: {offset}, Key: {key}, Partition: {partition}, Timestamp: {timestamp}, Message: {message}** . In this example we have three Consumers - one for man, one for woman and one common for both. So displayed messages from example above should look like this:
-    * consumer3   | Event Details: Group Id: helloworld-human, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763461681, Message: Hello World John
-    * consumer1   | Event Details: Group Id: helloworld-man-woman, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763461681, Message: Hello World John
-    * consumer3   | Event Details: Group Id: helloworld-human, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763490716, Message: Hello World Mary
-    * consumer2   | Event Details: Group Id: helloworld-man-woman, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763490716, Message: Hello World Mary
+4. Read messages by checking logs in Command Line tool. Following message should be displayed there: **{consumer}   | Event Details: Topic: {topic} Group Id: {group-id}, Offset: {offset}, Key: {key}, Partition: {partition}, Timestamp: {timestamp}, Message: {message}** . In this example we have three Consumers - one for man, one for woman and one common for both. So displayed messages from example above should look like this:
+    * consumer3   | Event Details: Topic: helloworld-man,helloworld-woman Group Id: helloworld-human, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763461681, Message: Hello World John
+    * consumer1   | Event Details: Topic: helloworld-man, Group Id: helloworld-man-woman, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763461681, Message: Hello World John
+    * consumer3   | Event Details: Topic: helloworld-man,helloworld-woman Group Id: helloworld-human, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763490716, Message: Hello World Mary
+    * consumer2   | Event Details: Topic: helloworld-woman, Group Id: helloworld-man-woman, Offset: 0, Key: helloworld, Partition: 1, Timestamp: 1645763490716, Message: Hello World Mary
 5. Clean up environment
     * Stop containers with `ctrl + C`
     * Remove containers `docker-compose down`
