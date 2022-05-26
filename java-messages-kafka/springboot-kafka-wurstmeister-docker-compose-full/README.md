@@ -41,6 +41,7 @@ Consumer is an application which consumes events sent by Producer via Zookeeper 
 * **Topic**: which Topic should be consumed by this specific Consumer;
 * **Group Id**: what is id of group this specific Consumer. If Consumers belong to the same group so that means that only one of them will consume one specific event. If Consumers doesn't belong to the same group so that means that every one of them will consume one specific event.
 * **Event**: consumed event can consists of following elements:
+    * **Topic**: name of topic;
     * **Group Id**: what is group id of Consumer which consumes this event;
     * **Offset**: what is delay of this event from the beginning;
     * **Key**: this is some kind of event's id;
