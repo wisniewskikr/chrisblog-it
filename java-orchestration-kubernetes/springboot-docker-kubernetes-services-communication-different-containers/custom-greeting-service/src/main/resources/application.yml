@@ -1,7 +1,0 @@
-server:
-  port: ${port:8080}
-
-custom:
-  text:
-    service:
-      url: http://text-service:9090/
