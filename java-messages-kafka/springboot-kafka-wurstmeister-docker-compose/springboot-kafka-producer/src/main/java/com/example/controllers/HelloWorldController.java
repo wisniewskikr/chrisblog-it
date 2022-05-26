@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GreetingController {	
+public class HelloWorldController {	
 	
 	private KafkaTemplate<String, String> kafkaTemplate;
 	
@@ -16,12 +16,12 @@ public class GreetingController {
 	private String topicName;
 
 	@Autowired
-	public GreetingController(KafkaTemplate<String, String> kafkaTemplate) {
+	public HelloWorldController(KafkaTemplate<String, String> kafkaTemplate) {
 		this.kafkaTemplate = kafkaTemplate;
 	}
 
-	@GetMapping(value="/greeting/name/{name}")
-	public String greetin(@PathVariable(name = "name") String name) {
+	@GetMapping(value="/helloworld/name/{name}")
+	public String helloWorld(@PathVariable(name = "name") String name) {
 		
 		String message = "Hello World " + name;
 		kafkaTemplate.send(topicName, message);

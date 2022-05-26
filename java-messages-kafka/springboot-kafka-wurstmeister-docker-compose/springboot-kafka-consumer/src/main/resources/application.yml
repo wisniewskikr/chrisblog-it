@@ -11,4 +11,4 @@ spring:
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
 topic:
-  name: greeting
+  name: helloworld

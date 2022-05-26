@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class GreetingController {
+public class HelloWorldController {
 		
 	@KafkaListener(topics = "#{'${topic.name}'}")
-	public void greetingListener(String message) {		
+	public void helloWorldListener(String message) {		
 		System.out.println(message);		
 	}
 	

@@ -71,7 +71,7 @@ services:
       SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS: kafka1:9093, kafka2:9095
       SPRING_KAFKA_PRODUCER_KEY_SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
       SPRING_KAFKA_PRODUCER_VALUE_SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
-      TOPIC_NAME: greeting-man
+      TOPIC_NAME: helloworld-man
       TOPIC_PARTITIONS: 2
       TOPIC_REPLICAS: 2
     networks:
@@ -93,7 +93,7 @@ services:
       SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS: kafka1:9093, kafka2:9095
       SPRING_KAFKA_PRODUCER_KEY_SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
       SPRING_KAFKA_PRODUCER_VALUE_SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
-      TOPIC_NAME: greeting-woman
+      TOPIC_NAME: helloworld-woman
       TOPIC_PARTITIONS: 2
       TOPIC_REPLICAS: 2
     networks:
@@ -113,10 +113,10 @@ services:
     environment:
       SERVER_PORT: 7090
       SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: kafka1:9093, kafka2:9095
-      SPRING_KAFKA_CONSUMER_GROUP_ID: greeting-man-woman
+      SPRING_KAFKA_CONSUMER_GROUP_ID: helloworld-man-woman
       SPRING_KAFKA_CONSUMER_KEY_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
       SPRING_KAFKA_CONSUMER_VALUE_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
-      TOPIC_NAME: greeting-man
+      TOPIC_NAME: helloworld-man
     networks:
       - network
     depends_on:
@@ -134,10 +134,10 @@ services:
     environment:
       SERVER_PORT: 7091
       SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: kafka1:9093, kafka2:9095
-      SPRING_KAFKA_CONSUMER_GROUP_ID: greeting-man-woman
+      SPRING_KAFKA_CONSUMER_GROUP_ID: helloworld-man-woman
       SPRING_KAFKA_CONSUMER_KEY_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
       SPRING_KAFKA_CONSUMER_VALUE_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
-      TOPIC_NAME: greeting-woman
+      TOPIC_NAME: helloworld-woman
     networks:
       - network
     depends_on:
@@ -155,10 +155,10 @@ services:
     environment:
       SERVER_PORT: 7092
       SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: kafka1:9093, kafka2:9095
-      SPRING_KAFKA_CONSUMER_GROUP_ID: greeting-human
+      SPRING_KAFKA_CONSUMER_GROUP_ID: helloworld-human
       SPRING_KAFKA_CONSUMER_KEY_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
       SPRING_KAFKA_CONSUMER_VALUE_DESERIALIZER: org.apache.kafka.common.serialization.StringDeserializer
-      TOPIC_NAME: greeting-man,greeting-woman
+      TOPIC_NAME: helloworld-man,helloworld-woman
     networks:
       - network
     depends_on:
@@ -167,4 +167,4 @@ services:
 
 networks:
   network:
-    name: greeting-network
+    name: helloworld-network

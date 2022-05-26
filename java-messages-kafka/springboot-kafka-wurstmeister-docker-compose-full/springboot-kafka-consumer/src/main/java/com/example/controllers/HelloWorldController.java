@@ -8,10 +8,10 @@ import org.springframework.kafka.support.KafkaHeaders;
 
 
 @RestController
-public class GreetingController {
+public class HelloWorldController {
 		
 	@KafkaListener(topics = "#{'${topic.name}'.split(',')}")
-	public void greetingListener(@Payload String message,
+	public void helloWorldListener(@Payload String message,
 	        @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
 	        @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition,	        
 	        @Header(KafkaHeaders.RECEIVED_TIMESTAMP) Long ts,

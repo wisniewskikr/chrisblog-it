@@ -41,7 +41,7 @@ USAGE
 Usage steps:
 1. Build packages with `mvn clean package`
 2. Start elements using Docker Compose with `docker-compose up --build`
-3. Send message (expected text **Done** in the browser) with **http://localhost:8080/greeting/name/{name}**. For instance: `http://localhost:8080/greeting/name/Chris`
+3. Send message (expected text **Done** in the browser) with **http://localhost:8080/helloworld/name/{name}**. For instance: `http://localhost:8080/helloworld/name/Chris`
 4. Read message by checking logs in Command Line tool. The application **Consumer** should display following message there: **Hello World {name}**. For instance: Hello World Chris.
 5. Clean up environment
     * Stop containers with `ctrl + C`
