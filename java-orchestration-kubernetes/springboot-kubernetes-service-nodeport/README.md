@@ -2,11 +2,11 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create Kubernetes **Service** in type **ClusterIP** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** tool. 
+The goal of this project is to present how to create Kubernetes **Service** in type **NodePort** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** tool. 
 
 
 ##### Details
-Kubernetes Service is REST object connected with some specific Kubernetes Pod. In this example Kubernetes Service is in type **ClusterIP** what means that it's available for other services insife Kubernetes but **NOT available outside Kubernetes - for example in browser**. Kubernetes Pod is group of one or more Docker containers. This this example Kubernetes Pod will contain the application displays message "Hello World" in JSON format in a browser. Docker **image** of this application and Docker **container** with this application will be run by Kubernetes tool. We assume that this application already exists and is published as Docker image in some Docker **public repository**. Link to:
+Kubernetes Service is REST object connected with some specific Kubernetes Pod. In this example Kubernetes Service is in type **NodePort** what means that it's **available outside Kubernetes - for example in browser**. Kubernetes Pod is group of one or more Docker containers. This this example Kubernetes Pod will contain the application displays message "Hello World" in JSON format in a browser. Docker **image** of this application and Docker **container** with this application will be run by Kubernetes tool. We assume that this application already exists and is published as Docker image in some Docker **public repository**. Link to:
 * **Source Code** of application: `https://github.com/wisniewskikr/chrisblog-it/tree/master/java-springboot/springboot-helloworld-browser-json-actuator-health`
 * **Docker Image** of application: `https://hub.docker.com/repository/docker/wisniewskikr/springboot-helloworld-image`
 
@@ -41,17 +41,18 @@ USAGE
 
 Usage steps:
 1. Create Kubernetes Pod with **kubectl apply -f {file_name}.yaml** . For instance with `kubectl apply -f kubernetes.yaml`
-2. Check Kubernetes Service
+2. Visit `http://localhost:31000`
+3. (Optional) Check Kubernetes Service
 
-    * Display list of Kubernetes Services (expected **TYPE ClusterIP** and **PORT(s) 8080/TCP**) with `kubectl get services`
+    * Display list of Kubernetes Services (expected **TYPE NodePort** and **PORT(s) 8080:31000/TCP**) with `kubectl get services`
     * Display describe for specific Kubernetes Service (expected list of Service details) with **kubectl describe service {service_name}** . For instance with `kubectl describe service helloworld-service`
-3. (Optional) Check Kubernetes Pod
+4. (Optional) Check Kubernetes Pod
 
     * Display list of Kubernetes Pods (expected **READY 1/1** and **STATUS Running**) with `kubectl get pods`
     * Display describe for specific Kubernetes Pod (expected **Started container helloworld-container**) with **kubectl describe pod {pod_name}** . For instance with `kubectl describe pod helloworld-pod`
     * Display logs of specific Kubernetes Pod with **kubectl logs {pod_name}** . For instance with `kubectl logs helloworld-pod`
    
-4. Clean up environment:
+5. Clean up environment:
 
     * Delete Kubernetes Pod with **kubectl delete pod {pod_name}** . For instance with `kubectl delete pod helloworld-pod`
     * Delete Kubernetes Service with **kubectl delete service {service_name}** . For instance with `kubectl delete service helloworld-service`
