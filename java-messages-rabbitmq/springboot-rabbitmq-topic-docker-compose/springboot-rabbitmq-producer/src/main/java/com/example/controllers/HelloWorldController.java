@@ -10,17 +10,17 @@ import com.example.configs.TopicJmsConfig;
 
 
 @RestController
-public class GreetingController {
+public class HelloWorldController {
 	
 	private RabbitTemplate rabbitTemplate;
 
 	@Autowired
-	public GreetingController(RabbitTemplate rabbitTemplate) {
+	public HelloWorldController(RabbitTemplate rabbitTemplate) {
 		this.rabbitTemplate = rabbitTemplate;
 	}
 
-	@GetMapping(value="/greeting/name/{name}")
-	public String greetingApi(@PathVariable(name = "name") String name) {
+	@GetMapping(value="/helloworld/name/{name}")
+	public String helloWorldApi(@PathVariable(name = "name") String name) {
 		
 		String message = "Hello World " + name;
 		rabbitTemplate.convertAndSend(TopicJmsConfig.FANOUT, "", message);

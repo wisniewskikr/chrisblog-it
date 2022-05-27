@@ -62,13 +62,13 @@ To start elements please open command line console on root folder of this projec
 
 ##### Ad 3\ Send message
 To send message accessible manually by API in Consumer application please put following URL in any browser: 
-* **http://localhost:8080/greeting/name/{name}** (for instance: http://localhost:8080/greeting/name/Chris)
+* **http://localhost:8080/helloworld/name/{name}** (for instance: http://localhost:8080/helloworld/name/Chris)
 
 After successful action message **Done** should be displayed
 
 ##### Ad 4\ Read message
 To read messages manually open browser and type there following URL: 
-* **http://localhost:9090/greeting/type/api/message**
+* **http://localhost:9090/helloworld/type/api/message**
 
 Message **Hello World {name}** should be displayed. For instance **Hello World Chris**
 

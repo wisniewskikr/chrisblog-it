@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TopicJmsConfig {
 	
-	private static final String API_QUEUE = "greeting-api";
-	private static final String LISTENER_QUEUE = "greeting-listener";
+	private static final String API_QUEUE = "helloworld-api";
+	private static final String LISTENER_QUEUE = "helloworld-listener";
 	public static final String FANOUT = "fanout";
 	
 	@Bean

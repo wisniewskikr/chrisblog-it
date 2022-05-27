@@ -48,4 +48,4 @@ services:
 
 networks:
   network:
-    name: custom-network
+    name: helloworld-network
