@@ -6,9 +6,11 @@ The goal of this project is to present how to create Kubernetes **Service** in t
 
 
 ##### Details
-**Kubernetes Service** is REST object connected with some specific Kubernetes Pod. In this example Kubernetes Service is in type **NodePort** what means that it's **available outside Kubernetes - for example in browser**. 
+**Kubernetes Service** is REST object connected with some specific Kubernetes Pod. In this example Kubernetes Service is in type **NodePort** what means that it's **available outside Kubernetes** - for example in browser. Service NodePort **can not connect directly with Kubernetes Pod**. Service NodePort **can connect indirectly with Kubernetes Pod through Kubernetes Deployment**.
 
-**Kubernetes Pod** is group of one or more Docker containers. This this example Kubernetes Pod will contain the application displays message "Hello World" in JSON format in a browser. Docker **image** of this application and Docker **container** with this application will be run by Kubernetes tool. We assume that this application already exists and is published as Docker image in some Docker **public repository**. Link to:
+**Kubernetes Deployments** creates Kubernetes Pods. You define desired state and Kubernetes Deployments changes the actual state to the desired state. Kubernetes Deployments can also manage **replicas** and check **healthcheck**.  
+
+**Kubernetes Pod** is group of one or more Docker containers. In this example Kubernetes Pod will contain the application displays message "Hello World" in JSON format in a browser. Docker **image** of this application and Docker **container** with this application will be run by Kubernetes tool. We assume that this application already exists and is published as Docker image in some Docker **public repository**. Link to:
 * **Source Code** of application: `https://github.com/wisniewskikr/chrisblog-it/tree/master/java-springboot/springboot-helloworld-browser-json-actuator-health`
 * **Docker Image** of application: `https://hub.docker.com/repository/docker/wisniewskikr/springboot-helloworld-image`
 
@@ -43,18 +45,22 @@ USAGE
 
 Usage steps:
 1. Create Kubernetes Pod with **kubectl apply -f {file_name}.yaml** . For instance with `kubectl apply -f kubernetes.yaml`
-2. Visit `http://localhost:31000`
-3. (Optional) Check Kubernetes Service
+1. Visit (it can takes few minutes to set up) `http://localhost:31000`
+1. (Optional) Check Kubernetes Deployment
+
+    * Display list of Kubernetes Deployments  (expected **READY 1/1**, **UP-TO-DATE 1** and **AVAILABLE 1**) with `kubectl get deployments`
+    * Display describe for specific Kubernetes Deployment (expected message ** Scaled up replica set helloworld-deployment-{number} to 1**) with **kubectl describe deployment {deployment_name}** . For instance with `kubectl describe deployment helloworld-deployment`
+1. (Optional) Check Kubernetes Service
 
     * Display list of Kubernetes Services (expected **TYPE NodePort** and **PORT(s) 8080:31000/TCP**) with `kubectl get services`
     * Display describe for specific Kubernetes Service (expected list of Service details) with **kubectl describe service {service_name}** . For instance with `kubectl describe service helloworld-service`
-4. (Optional) Check Kubernetes Pod
+1. (Optional) Check Kubernetes Pod
 
     * Display list of Kubernetes Pods (expected **READY 1/1** and **STATUS Running**) with `kubectl get pods`
     * Display describe for specific Kubernetes Pod (expected **Started container helloworld-container**) with **kubectl describe pod {pod_name}** . For instance with `kubectl describe pod helloworld-pod`
     * Display logs of specific Kubernetes Pod with **kubectl logs {pod_name}** . For instance with `kubectl logs helloworld-pod`
    
-5. Clean up environment:
+1. Clean up environment:
 
-    * Delete Kubernetes Pod with **kubectl delete pod {pod_name}** . For instance with `kubectl delete pod helloworld-pod`
+    * Delete Kubernetes Deployment with **kubectl delete deployment {deployment_name}** . For instance with `kubectl delete deployment helloworld-deployment`
     * Delete Kubernetes Service with **kubectl delete service {service_name}** . For instance with `kubectl delete service helloworld-service`
