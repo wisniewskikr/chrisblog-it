@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to **flexible** displays **Hello World** message in a **text** format in a **browser** using **Java** application with **Spring Boot** framework. Flexible means that text is not hardcoded but provided from outside the application i.e. as command line variables.
+The goal of this project is to present how to **flexible** displays **Hello World** message in a **text** format in a **browser** using **Java** application with **Spring Boot** framework. The flexible message means that text is not hardcoded but **provided from outside the application** i.e. as command line variables.
 
 ##### Details
 This application displays flexible "Hello World" message in browser.
