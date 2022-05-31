@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to create Kubernetes **Secret** with **application.properties** and use it in simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** tool. Secret means that viarables are not hardcoded in application but **provided from outside of application** - in this example via Kubernetes. 
+The goal of this project is to present how to create Kubernetes **Secret** with **environment variables** and use it in simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** tool. Secret means that viarables are not hardcoded in application but **provided from outside of application** - in this example via Kubernetes. 
 
 
 ##### Details
