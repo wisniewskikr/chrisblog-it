@@ -45,7 +45,7 @@ Usage steps:
 1. Start elements using Docker Compose with `docker-compose up --build`
 1. Send manual message (expected text **Done** in the browser) with **http://localhost:8080/helloworld/type/api/name/{name}**. For instance: `http://localhost:8080/helloworld/type/api/name/Chris`
 1. Read manual message. Read message (expected **Hello World {name}**, for instance: Hello World Chris.) with `http://localhost:9090/helloworld/type/api/message`
-1. Send automatic message (expected text **Done** in the browser) with **http://localhost:8080/helloworld/type/listener/name/{name}**. For instance: `http://localhost:8080/greeting/type/listener/name/Chris`
+1. Send automatic message (expected text **Done** in the browser) with **http://localhost:8080/helloworld/type/listener/name/{name}**. For instance: `http://localhost:8080/helloworld/type/listener/name/Chris`
 1. Read automatic message. Check logs in Command Line tool where message **Hello World {name}** should be displayed. For instance: Hello World Chris.
 1. Clean up environment
     * Stop containers with `ctrl + C`
