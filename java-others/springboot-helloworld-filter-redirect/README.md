@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement action **redirect** in a **Filter** in an example Java application. This project displays **Hello World** in console using Filters and displays **Hello World** message in a **text** format in a **browser** using **Java** application with **Spring Boot** framework.
+The goal of this project is to present how to implement action **redirect** in a **Filter** in an example Java application. This project displays **Hello World** in console using Filter and displays **Hello World** message in a **text** format in a **browser** using **Java** application with **Spring Boot** framework.
 
 ##### Details
 This application displays "Hello World Filter" in console using Filter and redirects URL. It also displays message "Hello World" in text format in a browser. 
@@ -37,6 +37,6 @@ USAGE
 Usage steps:
 1. Start application with `mvn spring-boot:run`
 1. Visit `http://localhost:8080`
-1. Check console (expected **Hello World Filter1!**)
+1. Check console (expected **Hello World Filter!**)
 1. Check browser (expected new URL **http://localhost:8080/filter**)
 1. Clean up environment with `ctrl + C`
