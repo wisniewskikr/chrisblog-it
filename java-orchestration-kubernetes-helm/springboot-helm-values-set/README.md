@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to work with **Helm Values** provided as **file** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** and **Helm** tools. 
+The goal of this project is to present how to work with **Helm Values** provided as command line **sets** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** and **Helm** tools. 
 
 
 ##### Details
@@ -11,7 +11,7 @@ The goal of this project is to present how to work with **Helm Values** provided
 * **Values**: variables which can be injected into Templates. In this way Templates can be more generic and reusable
 * **Conditions**: Templates can be rendered in different way regarding to some conditions
 
-This example presents how to work with **Values**. Values are variables which can be injected into template. They can be provided as file or as sets in command line. This example shows how to provide Values as **file**.
+This example presents how to work with **Values**. Values are variables which can be injected into template. They can be provided as file or as sets in command line. This example shows how to provide Values as **sets**.
 
 Link to:
 * **Source Code** of application: `https://github.com/wisniewskikr/chrisblog-it/tree/master/java-springboot/springboot-helloworld-browser-json-actuator-health`
@@ -41,7 +41,7 @@ PRECONDITIONS
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes-helm\springboot-helm-values-file`
+    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes-helm\springboot-helm-values-set`
 
 
 USAGE
@@ -51,8 +51,8 @@ Usage steps:
 1. Create Helm's Chart with **helm create {chart_name}**. For instance: `helm create springboot-helloworld-chart`
 1. Remove from Chart default folder Templates (confirmation with "Y" is required) with `rmdir springboot-helloworld-chart\templates`
 1. Copy in advance prepared Templates from folder **source** with `xcopy source springboot-helloworld-chart /E /H /C /I /Y`
-1. Parse Template with **helm template -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm template -f springboot-helloworld-chart/values.yaml springboot-helloworld-chart-instance springboot-helloworld-chart`
-1. Install Template with **helm install -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm install -f springboot-helloworld-chart/values.yaml  springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. Parse Template with **helm template -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm template --set hello=Hello --set world=World --set exclamation=! springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. Install Template with **helm install -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm install --set hello=Hello --set world=World --set exclamation=!  springboot-helloworld-chart-instance springboot-helloworld-chart`
 1. Check Template installation with `helm list`
 1. Visit (it can takes few minutes to set up) `http://localhost:31000`
 1. Clean up environment:
