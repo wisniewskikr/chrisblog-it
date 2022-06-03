@@ -5,7 +5,7 @@ metadata:
 data:
   message_hello_prop : {{ .Values.hello }}
   message_world_prop : {{ .Values.world }}
-  message_exclamation_prop : {{ .Values.exclamation }}
+  message_exclamation_prop : '{{ .Values.exclamation }}'
 ---
 kind: Deployment
 apiVersion: apps/v1
