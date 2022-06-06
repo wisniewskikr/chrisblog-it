@@ -51,13 +51,14 @@ Usage steps:
 1. Create Helm's Chart with **helm create {chart_name}**. For instance: `helm create springboot-helloworld-chart`
 1. Remove from Chart default folder Templates (confirmation with "Y" is required) with `rmdir springboot-helloworld-chart\templates`
 1. Copy in advance prepared Templates from folder **source** with `xcopy source springboot-helloworld-chart /E /H /C /I /Y`
-1. Parse Template for language **EN** with **helm template -f {file_with_values} --set lang=en {installation_name} {chart_name}**. For instance with `helm template -f springboot-helloworld-chart/values.yaml --set lang=en springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. (Optional) Parse Template for language **EN** with **helm template -f {file_with_values} --set lang=en {installation_name} {chart_name}**. For instance with `helm template -f springboot-helloworld-chart/values.yaml --set lang=en springboot-helloworld-chart-instance springboot-helloworld-chart`
 1. Install Template for language **EN** with **helm install -f {file_with_values} --set lang=en {installation_name} {chart_name}**. For instance with `helm install -f springboot-helloworld-chart/values.yaml --set lang=en springboot-helloworld-chart-instance springboot-helloworld-chart`
-1. Check Template installation with `helm list`
+1. (Optional) Check Template installation with `helm list`
 1. Visit (it can takes few minutes to set up) `http://localhost:31000`
-1. Parse Template for language **PL** with **helm template -f {file_with_values} --set lang=pl {installation_name} {chart_name}**. For instance with `helm template -f springboot-helloworld-chart/values.yaml --set lang=en springboot-helloworld-chart-instance springboot-helloworld-chart`
-1. Install Template for language **PL** with **helm upgrade -f {file_with_values} --set lang=pl {installation_name} {chart_name}**. For instance with `helm upgrade -f springboot-helloworld-chart/values.yaml --set lang=pl springboot-helloworld-chart-instance springboot-helloworld-chart`
-1. Check Template installation with `helm list`
+1. Uninstall Template for language **EN** with **helm uninstall {installation_name}**. For instance with `helm uninstall springboot-helloworld-chart-instance`
+1. (Optional) Parse Template for language **PL** with **helm template -f {file_with_values} --set lang=pl {installation_name} {chart_name}**. For instance with `helm template -f springboot-helloworld-chart/values.yaml --set lang=en springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. Install Template for language **PL** with **helm install -f {file_with_values} --set lang=pl {installation_name} {chart_name}**. For instance with `helm install -f springboot-helloworld-chart/values.yaml --set lang=pl springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. (Optional) Check Template installation with `helm list`
 1. Visit (it can takes few minutes to set up) `http://localhost:31000`
 1. Clean up environment:
 
