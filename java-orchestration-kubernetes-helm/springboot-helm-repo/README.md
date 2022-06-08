@@ -11,7 +11,10 @@ The goal of this project is to present how to work with **Helm Repo** for simple
 * **Values**: variables which can be injected into Templates. In this way Templates can be more generic and reusable
 * **Conditions**: Templates can be rendered in different way regarding to some conditions
 
-This example presents how to work with **Repo**. Repo means that you can create Chart and push it to some remote repository. Then some other developer can pull this Chart from remote repository and use it locally. In this example remote repository is **GitHub Pages**.
+This example presents how to work with **Repo**. Repo means that you can create Chart and push it to some remote repository. Then some other developer can pull this Chart from remote repository and use it locally. In this example remote repository is **GitHub Pages**. Remote repository for Chart is just **web server** (like GitHub Pages) which should contain three elements:
+* file ** *.tgz** with Chart content. There is Helm command which creates such package
+* file **index.yaml** with description of Chart. There is Helm command which creates such file
+* file **Chart.yaml** with details of Chart
 
 Link to:
 * **Source Code** of application: `https://github.com/wisniewskikr/chrisblog-it/tree/master/java-springboot/springboot-helloworld-browser-json-actuator-health`
