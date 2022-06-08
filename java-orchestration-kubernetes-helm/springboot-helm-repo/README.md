@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to work with **Helm Templates** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** and **Helm** tools. 
+The goal of this project is to present how to work with **Helm Repo** for simple "Hello World" **Java** application with **Spring Boot** framework using **Kubernetes** and **Helm** tools. 
 
 
 ##### Details
@@ -11,10 +11,7 @@ The goal of this project is to present how to work with **Helm Templates** for s
 * **Values**: variables which can be injected into Templates. In this way Templates can be more generic and reusable
 * **Conditions**: Templates can be rendered in different way regarding to some conditions
 
-This example presents how to work with **Templates** using Helm commands to:
-* **create** Template from YAML file
-* **parse** Template - check if there are no errors
-* **install/uninstall** Template on Kubernetes
+This example presents how to work with **Repo**. Repo means that you can create Chart and push it to some remote repository. Then some other developer can pull this Chart from remote repository and use it locally. In this example remote repository is **GitHub Pages**.
 
 Link to:
 * **Source Code** of application: `https://github.com/wisniewskikr/chrisblog-it/tree/master/java-springboot/springboot-helloworld-browser-json-actuator-health`
@@ -26,6 +23,7 @@ To launch this application please make sure that the **Preconditions** are met a
 ##### Technologies
 This application uses:
 * **Spring Boot** framework: `https://docs.google.com/document/d/1mvrJT5clbkr9yTj-AQ7YOXcqr2eHSEw2J8n9BMZIZKY/edit?usp=sharing`
+* **Github Pages** it's part of GIT tool: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
 
 
 PRECONDITIONS
@@ -44,7 +42,8 @@ PRECONDITIONS
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes-helm\springboot-helm-templates`
+    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes-helm\springboot-helm-repo`
+* Create **GitHub** repository named **springboot-helloworld-chart** with enabled **GitHub Pages** on branch **main**. How to do it you can find here: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
 
 
 USAGE
@@ -71,7 +70,7 @@ Usage steps:
 1. Add files to local repository with `git add .`
 1. Commit changes to local repository with `git commit -m "Init repo"`
 1. Push changes to origin repository with `git push origin main`
-1. Add Helm repo with **helm repo add helloworld-repo <github_pages_URL>**. It should look like this: `https://{your_github_id}.github.io/springboot-helloworld-chart/`. (For instance: "https://wisniewskikr.github.io/springboot-helloworld-chart/")
+1. Add Helm repo with **helm repo add helloworld-repo <github_pages_URL>**. It should look like this: `helm repo add helloworld-repo https://{your_github_id}.github.io/springboot-helloworld-chart/`. (For instance: "helm repo add helloworld-repo https://wisniewskikr.github.io/springboot-helloworld-chart/")
 1. (Optional) Display Helm repo list with `helm repo list`
 1. (Optional) Search Helm repo with `helm search repo`
 1. (Optional) Parse Template with **helm template {installation_name} {repo_name}/{chart_name}**. For instance with `helm template springboot-helloworld-chart-instance helloworld-repo/springboot-helloworld-chart`
