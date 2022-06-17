@@ -2,14 +2,18 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **communication** between two applications using **RestTemplate**. The result is **Hello World** message and **port** numbers of **Text** and **Display** services in a **JSON** format in a **browser** using **Java** applications with **Spring Boot** framework.
+The goal of this project is to present how to implement **communication** between two applications using **WebClient** type **mono**. The result is **Hello World** message and **port** numbers of **Text** and **Display** services in a **JSON** format in a **browser** using **Java** applications with **Spring Boot** framework.
 
 ##### Details
 Two the most important ways of communication between applications in Spring Boot are:
 * **RestTemplate**: synchronous communication
 * **WebClient**: synchronous and asynchronous communication
 
-The application displays message "Hello World" and "port" numbers of "Text" and "Display" services in JSON format in a browser. Service "Text" provides text which should be displayed. Service "Display" connects with service "Text" and takes from it text and port and then display it in a browser.
+WebClient handles two types of responses:
+* **mono**: single class is returned;
+* **flux**: collection of classes is returned.
+ 
+In this example - WebClient type "mono" - single class is returned from Text service. The application displays message "Hello World" and "port" numbers of "Text" and "Display" services in JSON format in a browser. Service "Text" provides text which should be displayed. Service "Display" connects with service "Text" and takes from it text and port and then display it in a browser.
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
@@ -32,7 +36,7 @@ PRECONDITIONS
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-others\springboot-communication-resttemplate`
+    * Go to source code folder with `cd chrisblog-it\java-others\springboot-communication-webclient-mono`
 
 
 USAGE
