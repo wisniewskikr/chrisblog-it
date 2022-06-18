@@ -12,6 +12,10 @@ Two the most important ways of communication between applications in Spring Boot
 WebClient handles two types of responses:
 * **mono**: single class is returned;
 * **flux**: collection of classes is returned.
+
+WebClient can be also:
+* **not blocked**: asynchronous communication. Code execution is not blocked by WebClient - execution doesn't wait for finishing WebClient task;
+* **blocked**: synchronous communication. Code execution is blocked by WebClient - execution waits for finishing WebClient task.
  
 In this example - WebClient type "flux" - collection of classes is returned from Text service. The application displays message "Hello World {number}" three times and "port" numbers of "Text" and "Display" services in JSON format in a browser. Service "Text" provides text which should be displayed. Service "Display" connects with service "Text" and takes from it text and port and then display it in a browser.
 

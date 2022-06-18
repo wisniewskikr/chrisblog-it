@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to implement **communication** between two applications using **WebClient** type **mono**. The result is **Hello World** message and **port** numbers of **Text** and **Display** services in a **JSON** format in a **browser** using **Java** applications with **Spring Boot** framework.
+The goal of this project is to present how to implement **communication** between two applications using **blocked WebClient**. The result is **Hello World** message and **port** numbers of **Text** and **Display** services in a **JSON** format in a **browser** using **Java** applications with **Spring Boot** framework.
 
 ##### Details
 Two the most important ways of communication between applications in Spring Boot are:
@@ -17,7 +17,7 @@ WebClient can be also:
 * **not blocked**: asynchronous communication. Code execution is not blocked by WebClient - execution doesn't wait for finishing WebClient task;
 * **blocked**: synchronous communication. Code execution is blocked by WebClient - execution waits for finishing WebClient task.
  
-In this example - WebClient type "mono" - single class is returned from Text service. The application displays message "Hello World" and "port" numbers of "Text" and "Display" services in JSON format in a browser. Service "Text" provides text which should be displayed. Service "Display" connects with service "Text" and takes from it text and port and then display it in a browser.
+In this example - blocked WebClient - text is displayed only when communication with Text service is finished. The application displays message "Hello World" and "port" numbers of "Text" and "Display" services in JSON format in a browser. Service "Text" provides text which should be displayed. Service "Display" connects with service "Text" and takes from it text and port and then display it in a browser.
 
 ##### Launch
 To launch this application please make sure that the **Preconditions** are met and then follow instructions from **Usage** section.
@@ -40,7 +40,7 @@ PRECONDITIONS
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-others\springboot-communication-webclient-mono`
+    * Go to source code folder with `cd chrisblog-it\java-others\springboot-communication-webclient-blocked-yes`
 
 
 USAGE
