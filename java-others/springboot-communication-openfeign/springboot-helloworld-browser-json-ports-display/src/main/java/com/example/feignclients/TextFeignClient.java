@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.jsons.TextJson;
 
-@FeignClient(name = "text-service", url = "localhost:9090")
+@FeignClient(name = "${text.service.name}", url = "${text.service.url}")
 public interface TextFeignClient {
 	
 	@GetMapping(value="/")
