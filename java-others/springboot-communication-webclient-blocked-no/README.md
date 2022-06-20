@@ -5,9 +5,10 @@ DESCRIPTION
 The goal of this project is to present how to implement **communication** between two applications using **not blocked WebClient**. The result is **Hello World** message and **port** numbers of **Text** and **Display** services in a **JSON** format in a **browser** using **Java** applications with **Spring Boot** framework.
 
 ##### Details
-Two the most important ways of communication between applications in Spring Boot are:
+Three the most important ways of communication between applications in Spring Boot are:
 * **RestTemplate**: synchronous communication
 * **WebClient**: synchronous and asynchronous communication
+* **OpenFeing**: related to Spring Cloud
 
 WebClient handles two types of responses:
 * **mono**: single class is returned;
