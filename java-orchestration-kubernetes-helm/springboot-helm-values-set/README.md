@@ -51,8 +51,8 @@ Usage steps:
 1. Create Helm's Chart with **helm create {chart_name}**. For instance: `helm create springboot-helloworld-chart`
 1. Remove from Chart default folder Templates (confirmation with "Y" is required) with `rmdir springboot-helloworld-chart\templates`
 1. Copy in advance prepared Templates from folder **source** with `xcopy source springboot-helloworld-chart /E /H /C /I /Y`
-1. Parse Template with **helm template -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm template --set hello=Hello --set world=World --set exclamation=! springboot-helloworld-chart-instance springboot-helloworld-chart`
-1. Install Template with **helm install -f {file_with_values} {installation_name} {chart_name}**. For instance with `helm install --set hello=Hello --set world=World --set exclamation=!  springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. Parse Template with **helm template --set {value} {installation_name} {chart_name}**. For instance with `helm template --set hello=Hello --set world=World --set exclamation=! springboot-helloworld-chart-instance springboot-helloworld-chart`
+1. Install Template with **helm install --set {values} {installation_name} {chart_name}**. For instance with `helm install --set hello=Hello --set world=World --set exclamation=!  springboot-helloworld-chart-instance springboot-helloworld-chart`
 1. Check Template installation with `helm list`
 1. Visit (it can takes few minutes to set up) `http://localhost:31000`
 1. Clean up environment:
