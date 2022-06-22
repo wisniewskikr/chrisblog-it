@@ -50,7 +50,7 @@ Usage steps:
 1. Search Helm's Hubs with **helm search hub <search_phase>**. For instance: `helm search hub springboot`
 1. Add Helm Repo with **helm repo add <repo_name> <hub_URL>**. For instance: `helm repo add helloworld-repo https://laminba2003.github.io/spring-rest-services/`
 1. (Optional) Display Helm repo list with `helm repo list`
-1. Install Helm Release with **helm install <release_name> <repo_name>**. For instance: `helm install helloworld-release helloworld-repo/spring-rest --version 0.1.0`
+1. Install Helm Release with **helm install <release_name> <repo_name>/<chart_name>**. For instance: `helm install helloworld-release helloworld-repo/spring-rest --version 0.1.0`
 1. Clean up environment:
 
     * Uninstall Helm Release with **helm uninstall <release_name>**. For instance: `helm uninstall helloworld-release`
