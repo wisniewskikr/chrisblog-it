@@ -5,10 +5,12 @@ DESCRIPTION
 The goal of this project is to present how to work with **Helm Hub**.
 
 ##### Details
-**Helm** is a package manager for Kubernetes. It means that it helps in management of YAML files - they are stored and are distributed as packages. A package in Helm is called **Chart**. There are three main areas of Helm:
+**Helm** is a package manager for Kubernetes. It means that it helps in management of YAML files - they are stored and distributed as packages. A package in Helm is called **Chart**. Main elements of Helm:
 * **Templates**: created from YAML files. These templates can be parsed - tested if there is no errors - and then installed on Kubernetes
-* **Values**: variables which can be injected into Templates. In this way Templates can be more generic and reusable
-* **Conditions**: Templates can be rendered in different way regarding to some conditions
+* **Values**: variables which can be injected into Templates. In this way Templates can be more generic and reusable. Values can be injected as **Set** or **File**
+* **Control Flow**: Templates can be rendered in different way regarding to some conditions
+* **Repo**: Charts can be deployed and downloaded from remote repositories
+* **Hub**: special type of repository. Available by default. Only confirmed companied can deploy to this repository. But everybody can download Charts from this repository
 
 This example presents how to work with **Hub**. Hub is special repository for Helm - only **verified companies** can push there charts. Developers can only **download from Hub** but they can not push there anything.
 
