@@ -1,4 +1,4 @@
-package com.baeldung.auth.config;
+package com.example.configs;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

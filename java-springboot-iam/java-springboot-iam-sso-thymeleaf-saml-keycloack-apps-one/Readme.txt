@@ -11,6 +11,8 @@ Keycloack changes:
 - KeycloackServerProperties.java
 - application.yml
 - helloworld-realm.json
+- METE-INF/services/org.keycloak.common.util.ResteasyProvider
+- METE-INF/services/org.keycloak.platform.PlatformProvider
 
 Client changes:
 - pom.xml

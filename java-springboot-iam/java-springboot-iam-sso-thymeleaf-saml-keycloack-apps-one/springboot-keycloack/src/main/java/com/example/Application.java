@@ -1,4 +1,4 @@
-package com.baeldung.auth;
+package com.example;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,16 +11,16 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 
-import com.baeldung.auth.config.KeycloakServerProperties;
+import com.example.configs.KeycloakServerProperties;
 
 @SpringBootApplication(exclude = LiquibaseAutoConfiguration.class)
 @EnableConfigurationProperties({ KeycloakServerProperties.class })
-public class AuthorizationServerApp {
+public class Application {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AuthorizationServerApp.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(AuthorizationServerApp.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Bean

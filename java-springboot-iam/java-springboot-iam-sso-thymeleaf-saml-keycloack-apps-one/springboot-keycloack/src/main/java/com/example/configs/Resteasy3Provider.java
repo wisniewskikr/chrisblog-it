@@ -1,4 +1,4 @@
-package com.baeldung.auth.config;
+package com.example.configs;
 
 import org.jboss.resteasy.core.Dispatcher;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
