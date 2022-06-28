@@ -7,7 +7,7 @@ public class KeycloakServerProperties {
 
     String contextPath = "/auth";
 
-    String realmImportFile = "baeldung-realm.json";
+    String realmImportFile = "helloworld-realm.json";
 
     AdminUser adminUser = new AdminUser();
 
