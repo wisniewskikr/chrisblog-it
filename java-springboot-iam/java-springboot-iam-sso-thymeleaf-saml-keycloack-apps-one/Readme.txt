@@ -1,6 +1,6 @@
 Console:
 - http://localhost:8083/auth
-- bael-admin
+- admin
 - pass
 
 Client:
