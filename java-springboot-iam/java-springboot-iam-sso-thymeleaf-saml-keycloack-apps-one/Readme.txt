@@ -7,6 +7,8 @@ Client:
 john@test.com / 123
 mike@other.com / pass
 
+user@test.com / pass
+
 Keycloack changes:
 - KeycloackServerProperties.java
 - application.yml
