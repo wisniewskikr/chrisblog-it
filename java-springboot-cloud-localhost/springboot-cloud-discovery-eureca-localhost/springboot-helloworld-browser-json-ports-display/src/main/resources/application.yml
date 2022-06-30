@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-helloworld-browser-json-ports-display
+
+server:
+  port: ${port:8080}
+
+text:
+  service:
+    name: springboot-helloworld-browser-json-ports-text
+    url: localhost:9090
