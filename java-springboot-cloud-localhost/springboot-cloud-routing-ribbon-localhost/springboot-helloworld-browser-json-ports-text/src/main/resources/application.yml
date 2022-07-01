@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: springboot-helloworld-browser-json-ports-text
+
+server:
+  port: ${port:9090}

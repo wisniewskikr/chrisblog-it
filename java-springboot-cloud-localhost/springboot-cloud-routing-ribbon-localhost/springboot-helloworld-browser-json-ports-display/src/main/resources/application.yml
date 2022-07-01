@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-helloworld-browser-json-ports-display
+
+server:
+  port: ${port:8080}
+
+text:
+  service:
+    name: system-api-gateway-service
+    url: localhost:8090/text
