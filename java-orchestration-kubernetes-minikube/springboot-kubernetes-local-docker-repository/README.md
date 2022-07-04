@@ -6,6 +6,9 @@ Kubernetes requires Docker image deployed on Docker repository. The goal of this
 
 
 ##### Details
+
+**Minikube** is type of Kubernetes for development or tests on local machine. It creates only one Kubernetes Cluster. It doesn't require external Docker. It has it's own instance.
+
 **Kubernetes Service** is REST object connected with some specific Kubernetes Pod. In this example Kubernetes Service is in type **NodePort** what means that it's **available outside Kubernetes** - for example in browser. Service NodePort **can not connect directly with Kubernetes Pod**. Service NodePort **can connect indirectly with Kubernetes Pod through Kubernetes Deployment**.
 
 **Kubernetes Deployments** creates Kubernetes Pods. You define desired state and Kubernetes Deployments changes the actual state to the desired state. Kubernetes Deployments can also manage **replicas** and check **healthcheck**.  
@@ -30,14 +33,14 @@ PRECONDITIONS
 * Installed **Java** (tested on version 1.8.0_291). Tool details: `https://docs.google.com/document/d/119VYxF8JIZIUSk7JjwEPNX1RVjHBGbXHBKuK_1ytJg4/edit?usp=sharing`
 * Installed **Maven** (tested on version 3.8.5). Tool details: `https://docs.google.com/document/d/1cfIMcqkWlobUfVfTLQp7ixqEcOtoTR8X6OGo3cU4maw/edit?usp=sharing`
 * Installed **Git** (tested on version 2.33.0.windows.2). Tool details: `https://docs.google.com/document/d/1Iyxy5DYfsrEZK5fxZJnYy5a1saARxd5LyMEscJKSHn0/edit?usp=sharing`
-* Installed **Docker** (tested on version version 20.10.12). Tool details: `https://docs.google.com/document/d/1tKdfZIrNhTNWjlWcqUkg4lteI91EhBvaj6VDrhpnCnk/edit?usp=sharing`
-* Installed **Kubernetes** on Docker (tested on version version 20.10.12). Tool details: `https://docs.google.com/document/d/1jOsK3Lkbkoq-Xx7Ln9o_ozCt6XpcSElOwu1o2AfQnNc/edit?usp=sharing`
+* Installed **Minikube** (tested on version version 1.26.0). Tool details: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
 
 ##### Preconditions - Actions
+* **Start Minikukbe** tool. Details you can find here: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes\springboot-kubernetes-pod`
+    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes\springboot-kubernetes-local-docker-repository`
 
 
 USAGE
