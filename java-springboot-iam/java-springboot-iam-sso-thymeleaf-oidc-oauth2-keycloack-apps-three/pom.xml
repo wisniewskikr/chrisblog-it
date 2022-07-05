@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>java-springboot-iam-sso-thymeleaf-saml-keycloack-apps-three</artifactId>
+    <artifactId>java-springboot-iam-sso-thymeleaf-oidc-oauth2-keycloack-apps-three</artifactId>
     <version>0.1.0</version>
     <modules>
     	<module>springboot-helloworld-thymeleaf-forms-simple-one</module>
