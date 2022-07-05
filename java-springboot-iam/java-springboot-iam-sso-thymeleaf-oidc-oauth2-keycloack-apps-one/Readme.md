@@ -2,14 +2,14 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to **secure** Java Spring Boot application with **SSO type SAML** of vendor **Keycloack**. This application displays a simple form as **HTML** page in a **browser** using **Java** language with **Spring Boot** and **Thymeleaf** frameworks.
+The goal of this project is to present how to **secure** Java Spring Boot application with **SSO type OpenId Connect (OIDC) and OAuth2** of vendor **Keycloack**. This application displays a simple form as **HTML** page in a **browser** using **Java** language with **Spring Boot** and **Thymeleaf** frameworks.
 
 ##### Details
 SSO (Single Sign-On) allows a user to log in once - with a single ID - to many applications which are in the same SSO range. There are two types of SSO:
 * SAML
 * OIDC + OAuth2
 
-This example presents SSO type SAML created by Keycloack. This SSO secures application. Before usage of application user is redirected to Login page. 
+This example presents SSO type OIDC and OAuth2 created by Keycloack. This SSO secures application. Before usage of application user is redirected to Login page. 
 User has to use credentials to use application.
 
 The application displays simple form as HTML page in a browser. This form consists of text field called "Name" and submit button. 
