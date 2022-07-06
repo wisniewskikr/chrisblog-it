@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class SamlConfig extends WebSecurityConfigurerAdapter {
 
 	 	@Value("${security.saml2.metadata-url}")
 	    String metadataUrl;
