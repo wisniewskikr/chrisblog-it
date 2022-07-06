@@ -1,3 +1,6 @@
+keytool -genkey -v -keystore keystore.jks -alias spring -keyalg RSA -keysize 2048 -validity 10000
+https://localhost:8443
+
 DESCRIPTION
 -----------
 
