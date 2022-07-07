@@ -35,6 +35,8 @@ PRECONDITIONS
 * Created account and added application in **Okta** (tested on version 2022.06.3 E). Details: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`
 
 ##### Preconditions - Actions
+* **Update SAML metadada** in file "application.properties". Especially property with URL of medatada: "security.saml2.metadata-url". Details how to create site with metadata: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`
+* **Create JKS** file and place it in location "src/main/resources". Details: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
@@ -46,7 +48,7 @@ USAGE
 
 Usage steps:
 1. Start application in Commnad Line with `mvn -f ./springboot-helloworld-thymeleaf-forms-simple spring-boot:run`
-1. Visit (credentials **wisniewskikr@gmail.com / 1Cuid123**) `https://localhost:8443`
+1. Visit (credentials from Okta. For instance: **wisniewskikr@gmail.com / 1Cuid123**) `https://localhost:8443`
 1. Log out with pressing **Logout** link 
 1. Clean up environment:
     * In the Command Line with `ctrl + C`
