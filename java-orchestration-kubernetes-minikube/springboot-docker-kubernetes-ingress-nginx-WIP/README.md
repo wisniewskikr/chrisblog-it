@@ -1,3 +1,15 @@
+* Create lockal domain: open file **Widnows -> System32 -> drivers -> etc -> hosts** and add there new domain **127.0.0.1 example.net**
+
+* kubectl apply -f nginx-controller.yml
+* kubectl apply -f kubernetes.yml
+* kubectl apply -f ingress.yml
+
+* kubectl delete namespace ingress-nginx
+* kubectl delete clusterrolebinding nginx-ingress-clusterrole-nisa-binding
+* kubectl delete clusterrole nginx-ingress-clusterrole
+
+---
+
 - https://kubernetes.github.io/ingress-nginx/deploy/
 - https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-ingress-guide-nginx-example.html
 - https://kubernetes.io/docs/concepts/services-networking/ingress/
