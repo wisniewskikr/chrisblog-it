@@ -20,7 +20,7 @@
 		<form action="#" th:action="@{/}" method="post">
 			<div class="frame border">
 				<div class="mb-3">
-					<div>Hi, <span sec:authentication="name">preferred_username</span> <a th:href="@{/log-out}">Logout</a></div>					
+					<div>Hi, <span sec:authentication="name">preferred_username</span> <a th:href="@{/saml/logout}">Logout</a></div>					
 				</div>
 				<div class="mb-3">
 					<h2>Hello World</h2>
