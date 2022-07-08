@@ -42,8 +42,7 @@
 		<dependency>
 		    <groupId>org.springframework.security.extensions</groupId>
 		    <artifactId>spring-security-saml-dsl</artifactId>
-		    <!-- version>1.0.0.M3</version -->
-		    <version>1.0.5.RELEASE</version>
+		    <version>1.0.0.M3</version>
 		</dependency>
 		
 	</dependencies>
