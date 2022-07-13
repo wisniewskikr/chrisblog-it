@@ -1,6 +1,3 @@
-http://localhost:8080/saml/SSO
-http://localhost:8080/saml/metadata
-
 DESCRIPTION
 -----------
 
@@ -39,13 +36,13 @@ PRECONDITIONS
 
 ##### Preconditions - Actions
 * **Update SAML metadada** in file "application.properties". Especially property with URL of medatada: "security.saml2.metadata-url". Details how to create site with metadata: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`
-    * https://localhost:8443/login/saml2/sso/okta
-    * https://localhost:8443/saml2/service-provider-metadata/okta
+    * http://localhost:8080/saml/SSO
+    * http://localhost:8080/saml/metadata
 * **Create JKS** file and place it in location "src/main/resources". Details: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-springboot-iam\java-springboot-iam-sso-thymeleaf-saml-okta-apps-one2`
+    * Go to source code folder with `cd chrisblog-it\java-springboot-iam\java-springboot-iam-sso-thymeleaf-saml-okta-apps-one3`
 
 
 USAGE
@@ -53,7 +50,7 @@ USAGE
 
 Usage steps:
 1. Start application in Commnad Line with `mvn -f ./springboot-helloworld-thymeleaf-forms-simple spring-boot:run`
-1. Visit (credentials from Okta. For instance: **chris.tester@gmail.com / Password1234**) `https://localhost:8443`
+1. Visit (credentials from Okta. For instance: **chris.tester@gmail.com / Password1234**) `https://localhost:8080`
 1. Log out with pressing **Logout** link 
 1. Clean up environment:
     * In the Command Line with `ctrl + C`
