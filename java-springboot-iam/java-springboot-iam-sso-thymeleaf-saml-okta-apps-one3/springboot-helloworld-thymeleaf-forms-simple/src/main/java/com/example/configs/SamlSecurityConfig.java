@@ -171,7 +171,7 @@ public class SamlSecurityConfig {
     @Qualifier("saml")
     public SavedRequestAwareAuthenticationSuccessHandler successRedirectHandler() {
         SavedRequestAwareAuthenticationSuccessHandler successRedirectHandler = new SavedRequestAwareAuthenticationSuccessHandler();
-        successRedirectHandler.setDefaultTargetUrl("/home");
+        successRedirectHandler.setDefaultTargetUrl("/");
         return successRedirectHandler;
     }
 
@@ -180,7 +180,7 @@ public class SamlSecurityConfig {
     public SimpleUrlAuthenticationFailureHandler authenticationFailureHandler() {
         SimpleUrlAuthenticationFailureHandler failureHandler = new SimpleUrlAuthenticationFailureHandler();
         failureHandler.setUseForward(true);
-        failureHandler.setDefaultFailureUrl("/error");
+        failureHandler.setDefaultFailureUrl("/");
         return failureHandler;
     }
 
