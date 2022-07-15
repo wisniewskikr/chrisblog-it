@@ -50,6 +50,7 @@ PRECONDITIONS
     * http://localhost:8080/saml/metadata
 * **Create JKS** file and place it in location "src/main/resources". Details: `https://docs.google.com/document/d/1KYPZRkgYxdSYUlGBqtktKvCT6D_PvG-t2_vgAn_lWro/edit?usp=sharing`    
 * **Update SAML metadada** in file "application.properties"
+* **Update sso.xml file** in folder "src/main/resources/metadata"
 
 
 USAGE
