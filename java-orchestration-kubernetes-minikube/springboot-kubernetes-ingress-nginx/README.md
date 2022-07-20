@@ -30,12 +30,12 @@ PRECONDITIONS
 * Installed **Minikube** (tested on version version 1.26.0). Tool details: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
 
 ##### Preconditions - Actions
-* **Start Minikukbe** tool. Details you can find here: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
-* **Enable Minikube addon "ingress"**: details you can find here: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
+* **Start Minikukbe** tool with `minikube start`. Details you can find here: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
+* **Enable Minikube addon "ingress"** with `minikube addons enable ingress`. Details you can find here: `https://docs.google.com/document/d/1GfgN7tJNTIJCaSzexJdR_Lm_S9pF2YykcpgSQzAZWZo/edit?usp=sharing`
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd springboot-docker-kubernetes-ingress-nginx`
+    * Go to source code folder with `cd chrisblog-it\java-orchestration-kubernetes-minikube\springboot-kubernetes-ingress-nginx`
 
 
 USAGE
