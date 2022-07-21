@@ -2,7 +2,7 @@ DESCRIPTION
 -----------
 
 ##### Goal
-The goal of this project is to present how to **secure** Java Spring Boot application with **SSO type SAML** of vendor **Okta**. This application displays a simple form as **HTML** page in a **browser** using **Java** language with **Spring Boot** and **Thymeleaf** frameworks.
+The goal of this project is to present how to **secure two** Java Spring Boot applications with **SSO type SAML** of vendor **Okta**. These applications display a simple form as **HTML** page in a **browser** using **Java** language with **Spring Boot** and **Thymeleaf** frameworks.
 
 ##### Details
 SSO (Single Sign-On) allows a user to log in once - with a single ID - to many applications which are in the same SSO range. There are two types of SSO:
