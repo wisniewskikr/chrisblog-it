@@ -41,7 +41,7 @@ PRECONDITIONS
 * **Download** source code and open any **Command Line** tool on **project's folder**. You can do it in following way:
     * Open any Command Line tool (for instance "Windonw PowerShell" on Windows OS) and go to folder where you want to download source code 
     * Clone Github repository with `git clone https://github.com/wisniewskikr/chrisblog-it.git`
-    * Go to source code folder with `cd chrisblog-it\java-others\springboot-communication-webclient-mono`
+    * Go to source code folder with `cd chrisblog-it\java-springboot-communication\springboot-communication-webclient-mono`
 
 
 USAGE
