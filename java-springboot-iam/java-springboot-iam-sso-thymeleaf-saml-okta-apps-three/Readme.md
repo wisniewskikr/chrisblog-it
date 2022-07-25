@@ -47,15 +47,10 @@ Usage steps:
 1. In the first Command Line tool start application with `mvn -f ./springboot-helloworld-thymeleaf-forms-simple-one spring-boot:run`
 1. In the second Command Line tool start application with `mvn -f ./springboot-helloworld-thymeleaf-forms-simple-two spring-boot:run`
 1. In the third Command Line tool start application with `mvn -f ./springboot-resource-text spring-boot:run`
-1. In the fourth Command Line tool start application with `mvn -f ./springboot-keycloack spring-boot:run`
 1. (Optional) Visit Keykloack console (credentials **admin / pass**) with `http://localhost:8083/auth`
-1. Visit (credentials **user@test.com / pass**) `http://localhost:8080`
-1. Visit (credentials are not requierd) `http://localhost:8081`
-1. Log out with pressing **Logout** link
-1. Visit again (credentials **user@test.com / pass**) `http://localhost:8080` 
-1. Log out with pressing **Logout** link
+1. Visit (credentials **user@test.com / pass**) `https://localhost:8443`
+1. Visit (credentials are not requierd) `https://localhost:8444`
 1. Clean up environment:
     * In the first Command Line with `ctrl + C`
     * In the second Command Line with `ctrl + C`
     * In the third Command Line with `ctrl + C`
-    * In the fourth Command Line with `ctrl + C`
